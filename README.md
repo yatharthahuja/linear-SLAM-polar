@@ -1,7 +1,7 @@
 # linear-SLAM-polar
-Formulation of LinearSLAM in Polar Co-ordinates
+# Formulation of LinearSLAM in Polar Co-ordinates
 
-##Included Files:
+# Included Files:
 
 1. cart2sph.m: *For converting cartesian coordinates into polar form*
 2. sph2cartc: *For converting polar coordinates into cartesian form*
