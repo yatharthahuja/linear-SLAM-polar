@@ -1,5 +1,5 @@
 function [x_ y_ z_] = rot_shift_cart(x,y,z,psi,theta,phi)
-  %psi,theta,phi = euler angles in XYZ (measured from respective axes)  
+  %psi,theta,phi = euler angles in XYZ (measured from respective axes, in radians)  
 
   c = cos([psi theta phi]);
   s = sin([psi theta phi]);
