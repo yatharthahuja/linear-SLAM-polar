@@ -2,7 +2,7 @@
 
 # Included Files:
 
-1. cart2sph.m: *For converting cartesian coordinates into polar form.* <\br>
+1. cart2sph.m: *For converting cartesian coordinates into polar form.* <br \>
           *INPUTS: cartesian coordinates(x, y, z).* 
           *OUTPUT: polar coordinates(az, elev, r)*
 2. sph2cartc: *For converting polar coordinates into cartesian form. INPUTS: polar coordinates(az, elev, r). OUTPUT: cartesian coordinates(x, y, z)*
