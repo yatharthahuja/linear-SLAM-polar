@@ -11,3 +11,6 @@
 <br />&emsp;*2. Translation displacement (a, b, c)*
 <br />&emsp;*3. Rotation displacement (psi, theta, phi)*
 <br />*It outputs new polar coordinates in the form (az, elev, r)*
+
+
+6. orientation_shift.m: *For implementing Euler angle shift of coordinates with respect to rotation in reference axes. <br />&emsp;INPUTS: rotation shift in XYZ fromat(psi,theta,phi) and initial orientation euler angles (alpha,beta,gamma). <br />&emsp;OUTPUT: New orientation angles(alpha,beta,gamma).*
