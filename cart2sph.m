@@ -1,27 +1,24 @@
-function [az,elev,r] = cart2sph(x,y,z)
+function [pol] = cart2sph(r)
 
 %   3D Cartesian to Spherical Coordinates
 %
-%   [az,elev,r] = mycart2sph(x,y,z)
+%   [az,elev,rad] = mycart2sph(r)
 %
 %   Inputs:
-%       x       x-coordinate
-%       y       y-coordinate
-%       z       z-coordinate
+%       r(1)       x-coordinate
+%       r(2)       y-coordinate
+%       r(3)    z-coordinate
 %
 %   Outputs:
-%       az      Azimuth angle in radians, measured counterclockwise
+%       az = pol(1)      Azimuth angle in radians, measured counterclockwise
 %               from the positive x axis (otherwise referred to as phi)
-%       elev    Elevation angle in radians, from xy plane (otherwise 
+%       elev = pol(2)    Elevation angle in radians, from xy plane (otherwise 
 %               referred to as theta) 
-%       r       Radius
-%
-%   Notes:
-%       The MATLAB function cart2sph reverses phi and theta.
-
-hypotxy = hypot(x,y);
-r = hypot(hypotxy,z);
-elev = acos(z./r);
-az = atan2(y,x);
-
+%       rad = pol(3)       Radius
+#hypotxy = hypot(r(1),r(2));
+#rad = hypot(hypotxy,r(3));
+rad = sqrt(sum(r.^2));
+elev = acos(r(3)./rad);#longitude
+az = atan2(r(2),r(1));#latitude
+pol = [az; elev; rad];
 end
